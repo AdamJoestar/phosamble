@@ -49,11 +49,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // User Profile Route
     Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show');
-
-    // Dashboard Route
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
 });
 
 
