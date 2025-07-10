@@ -8,6 +8,18 @@
                 <button type="submit" class="ml-2 py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">Create Board</button>
             </form>
 
+            <form action="{{ route('boards.join') }}" method="POST" class="my-4">
+                @csrf
+                <input type="text" name="code" placeholder="Enter board code to join..." maxlength="6" class="input input-bordered w-full max-w-xs dark:bg-gray-700">
+                <button type="submit" class="ml-2 py-2 px-4 bg-green-600 hover:bg-green-700 text-white rounded-md transition-colors">Join Board</button>
+                @error('code')
+                    <p class="text-red-500 mt-1">{{ $message }}</p>
+                @enderror
+                @if(session('info'))
+                    <p class="text-blue-500 mt-1">{{ session('info') }}</p>
+                @endif
+            </form>
+
         @if($boards->count())
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
                 @foreach ($boards as $board)
@@ -15,6 +27,7 @@
                         <a href="{{ route('boards.show', $board) }}" class="block">
                             <h3 class="font-bold text-lg dark:text-white">{{ $board->title }}</h3>
                             <p class="text-sm text-gray-500">{{ $board->memories->count() }} memories</p>
+                            <p class="text-xs text-gray-400 mt-1">Code: <span class="font-mono">{{ $board->code }}</span></p>
                         </a>
                         <div class="absolute top-2 right-2 flex space-x-2">
                             <a href="{{ route('boards.edit', $board) }}" class="btn btn-sm btn-outline btn-primary" title="Edit Board">Edit</a>

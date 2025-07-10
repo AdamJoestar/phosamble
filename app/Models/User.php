@@ -51,6 +51,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Board::class);
     }
+
+    public function joinedBoards()
+    {
+        return $this->belongsToMany(Board::class, 'board_user')->withTimestamps();
+    }
+
     public function comments()
     {
         return $this->hasMany(Comment::class);

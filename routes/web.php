@@ -41,6 +41,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Board Routes
     Route::get('/boards', [BoardController::class, 'index'])->name('boards.index');
     Route::post('/boards', [BoardController::class, 'store'])->name('boards.store');
+    Route::post('/boards/join', [BoardController::class, 'joinByCode'])->name('boards.join');
     Route::get('/boards/{board}', [BoardController::class, 'show'])->name('boards.show');
     Route::get('/boards/{board}/edit', [BoardController::class, 'edit'])->name('boards.edit');
     Route::put('/boards/{board}', [BoardController::class, 'update'])->name('boards.update');
