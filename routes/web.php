@@ -42,9 +42,15 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/boards', [BoardController::class, 'index'])->name('boards.index');
     Route::post('/boards', [BoardController::class, 'store'])->name('boards.store');
     Route::get('/boards/{board}', [BoardController::class, 'show'])->name('boards.show');
+    Route::get('/boards/{board}/edit', [BoardController::class, 'edit'])->name('boards.edit');
+    Route::put('/boards/{board}', [BoardController::class, 'update'])->name('boards.update');
+    Route::delete('/boards/{board}', [BoardController::class, 'destroy'])->name('boards.destroy');
 
     // Memory & Comment Routes
     Route::post('/boards/{board}/memories', [MemoryController::class, 'store'])->name('memories.store');
+    Route::get('/boards/{board}/memories/{memory}/edit', [MemoryController::class, 'edit'])->name('memories.edit');
+    Route::put('/boards/{board}/memories/{memory}', [MemoryController::class, 'update'])->name('memories.update');
+    Route::delete('/boards/{board}/memories/{memory}', [MemoryController::class, 'destroy'])->name('memories.destroy');
     Route::post('/boards/{board}/comments', [CommentController::class, 'store'])->name('comments.store');
 
     // User Profile Route
