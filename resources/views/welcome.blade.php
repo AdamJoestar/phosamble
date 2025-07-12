@@ -11,25 +11,25 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="antialiased font-sans bg-[#121212] text-gray-200">
+<body class="antialiased font-serif bg-warm-light text-nostalgic-dark">
 
-    <header class="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-sm">
+    <header class="fixed top-0 left-0 w-full z-50 bg-warm-muted/30 backdrop-blur-sm">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <div class="flex-shrink-0">
-                    <a href="/" class="text-2xl font-bold text-white">Phosamble</a>
+                    <a href="/" class="text-2xl font-bold text-nostalgic-dark">Phosamble</a>
                 </div>
 
                 <div class="flex items-center gap-4">
                     @auth
-                        <a href="{{ url('/boards') }}" class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors">
+                        <a href="{{ url('/boards') }}" class="px-4 py-2 text-sm font-semibold text-warm-light bg-warm-accent hover:bg-nostalgic-dark rounded-md transition-colors">
                             My Boards
                         </a>
                     @else
-                        <a href="{{ route('login') }}" class="hidden sm:block px-4 py-1.5 text-sm text-gray-300 border border-gray-600 rounded-md hover:bg-gray-800 transition-colors">
+                        <a href="{{ route('login') }}" class="hidden sm:block px-4 py-1.5 text-sm text-nostalgic-muted border border-warm-muted rounded-md hover:bg-warm-muted transition-colors">
                             Log In
                         </a>
-                        <a href="{{ route('register') }}" class="px-4 py-1.5 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-blue-500 rounded-md hover:opacity-90 transition-opacity">
+                        <a href="{{ route('register') }}" class="px-4 py-1.5 text-sm font-semibold text-warm-light bg-gradient-to-r from-warm-accent to-nostalgic-dark rounded-md hover:opacity-90 transition-opacity">
                             Sign Up
                         </a>
                     @endauth
@@ -39,15 +39,15 @@
     </header>
 
     <main class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-warm-muted/50 via-transparent to-warm-muted/50"></div>
 
         <div class="relative z-10 flex flex-col items-center text-center p-6">
 
-            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent drop-shadow-sm">
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter bg-gradient-to-b from-nostalgic-dark to-warm-accent bg-clip-text text-transparent drop-shadow-sm">
                 Phosamble
             </h1>
 
-            <p class="mt-4 text-lg text-gray-400 max-w-lg">
+            <p class="mt-4 text-lg text-nostalgic-muted max-w-lg">
                 Capture and relive your most cherished moments with loved ones.
             </p>
         </div>
