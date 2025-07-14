@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <div class="w-full max-w-md p-6 bg-warm-light rounded-lg shadow-lg">
+        <div class="w-full max-w-md p-6 rounded-lg shadow-lg">
         <div class="flex justify-center mb-6">
             <a href="/">
                 <svg class="w-12 h-12 text-nostalgic-dark" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">

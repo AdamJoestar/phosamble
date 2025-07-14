@@ -12,22 +12,22 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Merriweather', 'serif', ...defaultTheme.fontFamily.sans],
+                sans: ['Pixelate', 'Merriweather', 'serif', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 warm: {
-                    light: '#F5E9DA',
-                    DEFAULT: '#D9B99B',
-                    dark: '#A9746E',
-                    accent: '#C49E7F',
-                    muted: '#BFA6A0',
+                    light: '#FDEBD0',      // softer light beige
+                    DEFAULT: '#D4A373',    // warm terracotta
+                    dark: '#A0522D',       // sienna brown
+                    accent: '#E07A5F',     // coral accent
+                    muted: '#C9B29B',      // muted sand
                 },
                 nostalgic: {
-                    light: '#F3E9E2',
-                    DEFAULT: '#C9A798',
-                    dark: '#8C6A63',
-                    accent: '#B28C7E',
-                    muted: '#A88B7B',
+                    light: '#E9D8A6',      // soft yellow
+                    DEFAULT: '#C1A57B',    // warm tan
+                    dark: '#7B6D5A',       // muted brown
+                    accent: '#D4B483',     // light caramel
+                    muted: '#BFAF91',      // muted beige
                 },
             },
         },
